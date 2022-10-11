@@ -25,9 +25,7 @@ const SelectAnswer = ({x,correctAnswer}) => {
 
         <>
              <label > 
-             <input  type='checkbox'  checked={x===checked} 
-             onChange={()=>setChecked(x)}
-              
+             <input  type='checkbox'  onClick={()=>handleClick(x)}
              
 
 
