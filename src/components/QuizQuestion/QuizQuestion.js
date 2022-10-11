@@ -6,7 +6,7 @@ const QuizQuestion = () => {
     const {questions} = useLoaderData().data;
    
     return (
-        <div>
+        <div className=''>
             <h2>this is from quixquestion</h2>
             {
                 questions.map(qs=> <Question 

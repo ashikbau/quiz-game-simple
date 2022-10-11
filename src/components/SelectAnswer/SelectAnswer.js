@@ -1,45 +1,35 @@
 import React, { useState } from 'react';
 
-const SelectAnswer = ({x,correctAnswer}) => {
 
 
-     const[answer,setAnswer]=useState()
-     const[checked,setChecked]=useState('')
-  
+const SelectAnswer = ({option,handleChange,value,answer}) => {
    
-
-    const handleClick=(x)=>{
-        if(x===correctAnswer){
-            setAnswer(true)
-            
-           
-        }
-        else{
-            setAnswer(false)
-
-        }
-
-    }
+   
   
     return (
 
-        <>
-             <label > 
-             <input  type='checkbox'  onClick={()=>handleClick(x)}
-             
-
-
+       <div>
+ <div className='border-spacing-2 w-150 rounded bg-slate-300 '>
         
-        />{x}  </label>  
+            
+        <label className='' > 
+         <input type="checkbox" 
+         checked={value===option}
 
-        {
-        answer&&<p>Your answer is correct</p>
-        }
+         
+         onChange={(e)=>handleChange(option)}
+        
+         
+        /> {option} </label> 
+        
+        
+        
 
+         </div>
+        
+   
+       </div>
 
-       
-        </>
-       
     );
 };
 

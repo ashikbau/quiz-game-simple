@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+little Descriplition of project
+github lin : 
+netlify link:
+description : I tried to divided the work very small step and tried to implement it step by step.
+Here I defined router in app.js file and I shoed the topic in home.js file. Here I also added some extra work in blog.js file and also more.
