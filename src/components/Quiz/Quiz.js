@@ -13,7 +13,7 @@ const Quiz = ({quiz}) => {
     <p>total : {total}</p>
     
     <div className="card-actions justify-center">
-      <Link to={`/quiz/${id}`}><button className="btn btn-primary">Buy Now</button></Link>
+      <Link to={`/quiz/${id}`}><button className="btn btn-primary">Select Quiz</button></Link>
     </div>
   </div>
 </div>
