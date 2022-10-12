@@ -11,9 +11,11 @@ const Question = ({qs}) => {
     // console.log(correctAnswer)
    const[check,setCheck]= useState()
    const[answer,setAnswer]=useState(null)
+   const [rightAnswer, setRightAnswer] = useState('')
 
    const handleCorrectAnsClick = (correctAnswer)=>{
-    // console.log(correctAnswer)
+ 
+    setRightAnswer(correctAnswer)
 
    }
   
@@ -35,16 +37,16 @@ const Question = ({qs}) => {
 
   let content=null;
   if(answer===null) content=''
-  if(answer===false  ) content=<p>Swal.fire(
-    'OPS!',
-    'Your Answer is wrong!',
-    'Try Again'
-  )</p>
-  if(answer===true  ) content=<p>Swal.fire(
-    'Good job!',
-    'Your Answer is correct!',
-    'success'
-  )</p>
+  if(answer===false  ) content= alert('Your Answer is false')
+  if(answer===true  ) content= alert('Your answer is correct')
+
+  
+  let element='';
+  if(rightAnswer=== '') element =''
+  
+  if(rightAnswer) element= <p>{correctAnswer}</p>
+
+
  
  
     
@@ -52,9 +54,10 @@ const Question = ({qs}) => {
         <div className=''>
           <div className=''>
           <div className='p-30'>
-            <button onClick={()=>handleCorrectAnsClick()}>
+            <button onClick={()=>handleCorrectAnsClick(correctAnswer)}>
             <EyeIcon className="h-6 w-6 text-blue-500 "/>
             </button>
+            {element}
 
           </div>
 

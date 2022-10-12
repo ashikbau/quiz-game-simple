@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
+import Statistics from '../Statistics/Statistics';
 
 const Home = () => {
     const quizs = useLoaderData().data;
@@ -27,6 +28,7 @@ const Home = () => {
         }
         
       </div>
+     
        </div>
     );
 };

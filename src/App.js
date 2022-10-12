@@ -7,8 +7,8 @@ import QuizQuestion from './components/QuizQuestion/QuizQuestion';
 import Main from './layout/Main';
 import Blog from './components/Blog/Blog';
 import ErrorPage from './components/ErrorPage/ErrorPage';
-import Statistics from './components/Home/Statistics/Statistics';
-// import ErrorPage from './components/ErrorPage/ErrorPage';
+import Statistics from './components/Statistics/Statistics'
+
 
 function App() {
 const router = createBrowserRouter([
@@ -34,12 +34,19 @@ children:[
    },
   {path:'/about', element: <About></About>},
   {path:'/blog', element:<Blog></Blog>},
-  {path:'/statistics', element:<Statistics></Statistics>},
+  
   // {path:'*', element: <div>You make error. please try again</div>}
 
 ]
+
 },
- 
+{
+  path:'/statistics',
+  loader:async()=>{
+   return fetch('https://openapi.programming-hero.com/api/quiz')
+  },
+  element:<Statistics></Statistics>
+},
   
 
 ])

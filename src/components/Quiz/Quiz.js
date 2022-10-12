@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Statistics from '../Home/Statistics/Statistics';
+
 
 const Quiz = ({quiz}) => {
     // console.log(quiz)
@@ -18,7 +18,7 @@ const Quiz = ({quiz}) => {
     <div className="card-actions justify-center">
       <Link to={`/quiz/${id}`}><button className="btn btn-primary">Select Quiz</button></Link>
     </div>
-    <Statistics hello='hello' total={total}></Statistics>
+    
 
 
   </div>
