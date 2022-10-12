@@ -7,7 +7,7 @@ const QuizQuestion = () => {
    
     return (
         <div className=''>
-            <h2>this is from quixquestion</h2>
+            
             {
                 questions.map(qs=> <Question 
                     key={qs.id}

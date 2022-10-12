@@ -25,6 +25,7 @@ const Home = () => {
         {
             quizs.map(quiz =><Quiz key={quiz.id} quiz={quiz}></Quiz>)
         }
+        
       </div>
        </div>
     );
