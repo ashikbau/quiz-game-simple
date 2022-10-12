@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import SelectAnswer from '../SelectAnswer/SelectAnswer';
-import { BeakerIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid'
 
 const Question = ({qs}) => {
 
-   
+  //  console.log(qs)
   
     
     const{question,id,options, correctAnswer}= qs
+    // console.log(correctAnswer)
    const[check,setCheck]= useState()
    const[answer,setAnswer]=useState(null)
+
+   const handleCorrectAnsClick = (correctAnswer)=>{
+    // console.log(correctAnswer)
+
+   }
   
 
         const handleChange=(option)=>{
@@ -29,21 +35,31 @@ const Question = ({qs}) => {
 
   let content=null;
   if(answer===null) content=''
-  if(answer===false  ) content=<p>Worng Answer</p>
-  if(answer===true  ) content=<p>Correct Answer</p>
+  if(answer===false  ) content=<p>Swal.fire(
+    'OPS!',
+    'Your Answer is wrong!',
+    'Try Again'
+  )</p>
+  if(answer===true  ) content=<p>Swal.fire(
+    'Good job!',
+    'Your Answer is correct!',
+    'success'
+  )</p>
  
  
     
     return (
-        <div>
+        <div className=''>
           <div className=''>
-          <div>
-            <button>Show Correct Answer</button>
-            <BeakerIcon className="h-6 w-6 text-blue-500"/>
+          <div className='p-30'>
+            <button onClick={()=>handleCorrectAnsClick()}>
+            <EyeIcon className="h-6 w-6 text-blue-500 "/>
+            </button>
 
           </div>
 
           <h1 className='font-bold'>{question}</h1>
+          
 
           
          
