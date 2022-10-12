@@ -44,7 +44,7 @@ const Question = ({qs}) => {
   let element='';
   if(rightAnswer=== '') element =''
   
-  if(rightAnswer) element= <p>{correctAnswer}</p>
+  if(rightAnswer) element= <h1>{correctAnswer}</h1>
 
 
  

@@ -5,6 +5,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const Statistics = () => {
     const quizs = useLoaderData().data;
+    console.log(quizs)
     
     
     return (

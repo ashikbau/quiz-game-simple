@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import {  Link, NavLink } from 'react-router-dom';
 
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    
     return (
         
             <div className='bg-gray-100'>
